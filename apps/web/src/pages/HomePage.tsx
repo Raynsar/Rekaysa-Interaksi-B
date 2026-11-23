@@ -1,11 +1,15 @@
 import { ArrowRight, ClipboardList, Package, Truck } from 'lucide-react'
 import { Link } from '../utils/router'
-import { demoOrders, demoProduct } from '../services/demoData'
-import { computePriceBreakdown, formatCurrency } from '../services/priceService'
+import { useApp } from '../context/AppContext'
+import { demoProduct } from '../services/demoData'
+import { formatCurrency, getEffectivePrice } from '../services/priceService'
 import OrderCard from '../components/OrderCard'
+import PriceUpdateNotice from '../components/PriceUpdateNotice'
 
 export default function HomePage() {
-  const finalPrice = computePriceBreakdown(demoProduct.price)
+  const { state, demo } = useApp()
+  const effective = getEffectivePrice(demoProduct.price, demo.priceOverride)
+  const latestOrder = state.orders[0]
 
   return (
     <div className="stack stack--large">
@@ -27,13 +31,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {effective.updated && (
+        <PriceUpdateNotice
+          previousTotal={effective.previousTotal}
+          currentTotal={effective.breakdown.total}
+        />
+      )}
+
       <section className="stack">
         <h2 className="section-title">Harga final sejak awal</h2>
         <div className="card product-preview">
           <div className="stack">
             <strong>{demoProduct.name}</strong>
             <span className="muted">{demoProduct.description}</span>
-            <span className="price">{formatCurrency(finalPrice.total)}</span>
+            <span className="price">{formatCurrency(effective.breakdown.total)}</span>
             <span className="muted">Termasuk biaya ukuran khusus dan ongkir</span>
           </div>
           <Link to="/product" className="button button--secondary">
@@ -42,10 +53,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="stack">
-        <h2 className="section-title">Pesanan terbaru</h2>
-        <OrderCard order={demoOrders[0]} />
-      </section>
+      {latestOrder && (
+        <section className="stack">
+          <h2 className="section-title">Pesanan terbaru</h2>
+          <OrderCard order={latestOrder} />
+        </section>
+      )}
 
       <section className="feature-grid">
         <div className="card stack">

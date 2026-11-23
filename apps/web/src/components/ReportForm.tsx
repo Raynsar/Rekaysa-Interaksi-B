@@ -1,24 +1,7 @@
-import { useState, type FormEvent } from 'react'
-import type { OrderStatus } from '../types'
-
-interface ReportPayload {
-  category: string
-  description: string
-  evidenceName?: string
-  evidenceSize?: number
-}
-
-interface ReportFormProps {
-  orderId: string
-  status: OrderStatus
-  defaultCategory: string
-  onSubmit: (payload: ReportPayload) => void
-}
-
-type FieldErrors = Partial<Record<'category' | 'description' | 'evidence', string>>
-
-const MAX_DESCRIPTION = 1000
-const MAX_EVIDENCE_BYTES = 5 * 1024 * 1024
+import type { FormEvent } from 'react'
+import type { OrderStatus, ReportFormValue } from '../types'
+import type { ReportErrors } from '../services/reportService'
+import { MAX_DESCRIPTION_LENGTH } from '../services/reportService'
 
 const CATEGORY_OPTIONS = [
   'Paket belum diterima',
@@ -29,47 +12,30 @@ const CATEGORY_OPTIONS = [
   'Lainnya',
 ]
 
-function suggestedCategory(status: OrderStatus): string {
-  if (status === 'Dikirim') return 'Paket belum diterima'
-  if (status === 'Belum Bayar') return 'Masalah pembayaran'
-  if (status === 'Selesai') return 'Status pesanan tidak akurat'
-  return 'Lainnya'
+interface ReportFormProps {
+  orderId: string
+  status: OrderStatus
+  value: ReportFormValue
+  errors: ReportErrors
+  submitting?: boolean
+  successTicket?: string | null
+  onChange: (value: ReportFormValue) => void
+  onSubmit: () => void
 }
 
 export default function ReportForm({
   orderId,
   status,
-  defaultCategory,
+  value,
+  errors,
+  submitting = false,
+  successTicket = null,
+  onChange,
   onSubmit,
 }: ReportFormProps) {
-  const [category, setCategory] = useState(defaultCategory || suggestedCategory(status))
-  const [description, setDescription] = useState('')
-  const [evidence, setEvidence] = useState<File | null>(null)
-  const [errors, setErrors] = useState<FieldErrors>({})
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
-    const nextErrors: FieldErrors = {}
-    if (!category) nextErrors.category = 'Kategori wajib dipilih.'
-    if (!description.trim()) {
-      nextErrors.description = 'Deskripsi wajib diisi.'
-    } else if (description.length > MAX_DESCRIPTION) {
-      nextErrors.description = `Deskripsi maksimal ${MAX_DESCRIPTION} karakter.`
-    }
-    if (evidence && evidence.size > MAX_EVIDENCE_BYTES) {
-      nextErrors.evidence = 'Ukuran bukti maksimal 5MB.'
-    }
-
-    setErrors(nextErrors)
-    if (Object.keys(nextErrors).length > 0) return
-
-    onSubmit({
-      category,
-      description: description.trim(),
-      evidenceName: evidence?.name,
-      evidenceSize: evidence?.size,
-    })
+    onSubmit()
   }
 
   return (
@@ -81,21 +47,19 @@ export default function ReportForm({
         </p>
       </div>
 
+      {successTicket && (
+        <p className="notice notice--success" role="status">
+          <strong>Laporan diterima.</strong> Nomor tiket kamu: {successTicket}
+        </p>
+      )}
+
       <div className="report-form__attachments">
         <div className="field">
           <label className="field__label" htmlFor="report-order-id">
             ID Pesanan
           </label>
-          <input
-            id="report-order-id"
-            className="input"
-            value={orderId}
-            readOnly
-            aria-describedby="report-order-id-hint"
-          />
-          <span id="report-order-id-hint" className="muted">
-            Terisi otomatis dari pesanan.
-          </span>
+          <input id="report-order-id" className="input" value={orderId} readOnly />
+          <span className="muted">Terisi otomatis dari pesanan.</span>
         </div>
 
         <div className="field">
@@ -113,8 +77,8 @@ export default function ReportForm({
         <select
           id="report-category"
           className="select"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
+          value={value.category}
+          onChange={(event) => onChange({ ...value, category: event.target.value })}
           aria-invalid={Boolean(errors.category)}
         >
           <option value="">Pilih kategori</option>
@@ -134,14 +98,14 @@ export default function ReportForm({
         <textarea
           id="report-description"
           className="textarea"
-          value={description}
-          maxLength={MAX_DESCRIPTION}
-          onChange={(event) => setDescription(event.target.value)}
+          value={value.description}
+          maxLength={MAX_DESCRIPTION_LENGTH}
+          onChange={(event) => onChange({ ...value, description: event.target.value })}
           placeholder="Ceritakan masalah yang kamu alami"
           aria-invalid={Boolean(errors.description)}
         />
         <span className="muted">
-          {description.length}/{MAX_DESCRIPTION} karakter
+          {value.description.length}/{MAX_DESCRIPTION_LENGTH} karakter
         </span>
         {errors.description && <span className="field__error">{errors.description}</span>}
       </div>
@@ -155,20 +119,31 @@ export default function ReportForm({
           className="input"
           type="file"
           accept="image/*,.pdf"
-          onChange={(event) => setEvidence(event.target.files?.[0] ?? null)}
+          onChange={(event) => {
+            const file = event.target.files?.[0]
+            onChange({
+              ...value,
+              evidenceName: file?.name,
+              evidenceSize: file?.size,
+            })
+          }}
           aria-invalid={Boolean(errors.evidence)}
         />
-        {evidence && (
+        {value.evidenceName && (
           <span className="muted">
-            {evidence.name} · {(evidence.size / 1024).toFixed(1)} KB
+            {value.evidenceName} · {((value.evidenceSize ?? 0) / 1024).toFixed(1)} KB
           </span>
         )}
         {errors.evidence && <span className="field__error">{errors.evidence}</span>}
       </div>
 
       <div className="report-form__actions">
-        <button type="submit" className="button button--primary button--block">
-          Kirim Laporan
+        <button
+          type="submit"
+          className="button button--primary button--block"
+          disabled={submitting}
+        >
+          {submitting ? 'Mengirim...' : 'Kirim Laporan'}
         </button>
       </div>
     </form>

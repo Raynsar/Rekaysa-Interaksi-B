@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { ArrowLeft, Flag } from 'lucide-react'
-import { Link } from '../utils/router'
-import { canCompleteInPreview, findDemoOrder } from '../services/demoData'
+import { Link, useNavigate } from '../utils/router'
+import { useApp } from '../context/AppContext'
+import { canCompleteOrder } from '../services/orderService'
+import { isDelayed, isReminderDue } from '../services/timeService'
 import ConfirmModal from '../components/ConfirmModal'
+import DelayBanner from '../components/DelayBanner'
 import DeliveryEstimate from '../components/DeliveryEstimate'
 import PriceBreakdown from '../components/PriceBreakdown'
+import ReminderBanner from '../components/ReminderBanner'
 import StatusBadge from '../components/StatusBadge'
-import { useToast } from '../components/ToastProvider'
 import NotFoundPage from './NotFoundPage'
 import type { Order } from '../types'
 
@@ -19,17 +22,30 @@ function timelineIndex(order: Order): number {
 }
 
 export default function OrderDetailPage({ orderId }: { orderId: string }) {
-  const order = findDemoOrder(orderId)
-  const { showToast } = useToast()
+  const { state, now, actions } = useApp()
+  const navigate = useNavigate()
   const [confirmOpen, setConfirmOpen] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const order = state.orders.find((item) => item.id === orderId)
 
   if (!order) return <NotFoundPage />
 
   const activeIndex = timelineIndex(order)
+  const canComplete = canCompleteOrder(order)
+  const delayed = isDelayed(order, now)
+  const reminderDue = canComplete && isReminderDue(order, now)
 
-  const confirmComplete = () => {
+  const finish = () => {
+    if (busy) return
+    setBusy(true)
+    const changed = actions.completeOrder(order.id)
     setConfirmOpen(false)
-    showToast('Konfirmasi diterima. Perubahan status diaktifkan pada Phase 4.', 'success')
+    setBusy(false)
+    if (changed) navigate('/orders?status=Selesai')
+  }
+
+  const waitAutomatically = () => {
+    actions.optInAutoComplete(order.id)
   }
 
   return (
@@ -65,6 +81,17 @@ export default function OrderDetailPage({ orderId }: { orderId: string }) {
         </ol>
       </section>
 
+      {delayed && <DelayBanner orderId={order.id} />}
+
+      {reminderDue && (
+        <ReminderBanner
+          order={order}
+          optedIn={Boolean(order.autoCompleteOptIn)}
+          onComplete={() => setConfirmOpen(true)}
+          onWait={waitAutomatically}
+        />
+      )}
+
       <DeliveryEstimate order={order} />
 
       <section className="card stack">
@@ -72,7 +99,7 @@ export default function OrderDetailPage({ orderId }: { orderId: string }) {
         {order.items.map((item) => (
           <div key={item.name} className="row checkout-summary__row">
             <span>{item.name} · {item.quantity} item</span>
-            <strong>{order.price.total.toLocaleString('id-ID')}</strong>
+            <strong>{item.price.toLocaleString('id-ID')}</strong>
           </div>
         ))}
         <PriceBreakdown breakdown={order.price} defaultOpen />
@@ -81,7 +108,7 @@ export default function OrderDetailPage({ orderId }: { orderId: string }) {
       <section className="card stack">
         <h2 className="section-title">Aksi pesanan</h2>
         <div className="order-detail__actions">
-          {canCompleteInPreview(order) && (
+          {canComplete && (
             <button
               type="button"
               className="button button--primary"
@@ -91,29 +118,22 @@ export default function OrderDetailPage({ orderId }: { orderId: string }) {
             </button>
           )}
           {order.status === 'Dikirim' && (
-            <button
-              type="button"
-              className="button button--secondary"
-              onClick={() => showToast('Lacak paket tersedia setelah integrasi kurir.', 'info')}
-            >
+            <button type="button" className="button button--secondary">
               Lacak Paket
             </button>
           )}
           {order.status === 'Selesai' && (
             <>
-              <button
-                type="button"
-                className="button button--primary"
-                onClick={() =>
-                  showToast('Pelunasan SPayLater ditampilkan sebagai UI simulasi.', 'info')
-                }
-              >
+              <button type="button" className="button button--primary">
                 Lunasi Sekarang
               </button>
               {order.spaylater && (
                 <span className="muted">Cicilan SPayLater siap dilunasi.</span>
               )}
             </>
+          )}
+          {order.autoCompleteOptIn && !order.autoCompleted && (
+            <span className="muted">Menunggu penyelesaian otomatis.</span>
           )}
           <Link to={`/report/${order.id}`} className="button button--outline">
             <Flag size={16} aria-hidden="true" />
@@ -126,8 +146,9 @@ export default function OrderDetailPage({ orderId }: { orderId: string }) {
         open={confirmOpen}
         title="Selesaikan pesanan ini?"
         message="Pastikan paket sudah kamu terima."
+        confirmLabel={busy ? 'Memproses...' : 'Ya, Selesaikan'}
         onClose={() => setConfirmOpen(false)}
-        onConfirm={confirmComplete}
+        onConfirm={finish}
       />
     </div>
   )

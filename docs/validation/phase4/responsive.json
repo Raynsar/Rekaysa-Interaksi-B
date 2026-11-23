@@ -1,0 +1,120 @@
+{
+  "responsive": [
+    {
+      "width": 390,
+      "route": "home",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "detail",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "report",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "account",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "home",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "detail",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "report",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "account",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "home",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "detail",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "report",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "account",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "home",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "detail",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "report",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "account",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    }
+  ],
+  "summary": {
+    "checks": 16,
+    "overflow": 0
+  }
+}

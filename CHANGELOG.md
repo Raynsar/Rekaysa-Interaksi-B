@@ -83,6 +83,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Phase 4. The Account panel currently contains only a labelled placeholder
   button as approved.
 
+#### Phase 4 — Persistence, auto-complete, notifications and reporting
+
+- Add `storageService` and `usePersistentState` with transactional rollback:
+  a failed write keeps the previous value and surfaces an error toast.
+- Add one `AppState` (orders, cart, ad frequency, notification log, report
+  drafts, tickets and counters) shared by list, detail, checkout, notifications
+  and the demo panel; checkout now creates a persisted order and navigates to
+  its detail page.
+- Add auto-complete opt-in (`Tunggu Otomatis`) with
+  `autoCompleteAt = deliveredAt + 48h` and a reminder at `autoCompleteAt - 24h`.
+  All tested time logic receives `now`; `useClock`/`timeService` are the only
+  clock boundary, so no tested service calls `Date.now()` directly.
+- Add delayed-delivery detection with deduplicated notification IDs
+  (`${orderId}:${kind}`) and failure recording that leaves order data intact.
+- Add ad frequency control: at most 3 impressions per local day plus a 24-hour
+  cooldown after the close button is used.
+- Add report drafts persisted per order, validation (category, description,
+  5MB evidence name/size only), `TKT-YYYY-NNNNNN` tickets, draft cleanup on
+  success and retained input on failure.
+- Add a labelled, resettable Demo panel in Account for forced localStorage
+  failure, forced notification failure and product price override. It is not
+  part of the normal purchase path.
+- Add `getEffectivePrice` as the single price source; when the demo override is
+  active, Home, Product, Cart and Checkout all show "Harga diperbarui." with
+  the previous and new values.
+- Add `npm run verify:phase4` (Chrome headless via CDP). Evidence: 32/32 runtime
+  checks pass in `docs/validation/phase4/phase4-runtime.json`, with 16 additional
+  responsive checks (4 routes x 390/768/1024/1440) in
+  `docs/validation/phase4/responsive.json`. Ten screenshots of changed UI are in
+  `docs/screenshots/phase4/`.
+- Record verification coverage: completion → Selesai + tab + toast, modal
+  cancel, reload persistence, ad close/cooldown/cap, report validation/draft/
+  ticket, all three demo scenarios, auto-complete with and without opt-in.
+  Formal AC statuses remain reserved for Phase 5.
+
 ### Changed
 
 - Renamed `README.MD` to `README.md` to avoid case-sensitive path failures on
@@ -90,5 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Phase 3: hide the bottom navigation from 640 px upward and show the tablet
   top navigation between 640–1023 px, so navigation changes match the
   documented breakpoints.
+- Phase 4: the hash router separates path and query so completing an order can
+  open the Orders page with the "Selesai" tab already selected.
 
 Deployment URL: `[URL Vercel diisi setelah deploy]`

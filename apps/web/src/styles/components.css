@@ -679,6 +679,64 @@ svg {
   padding-top: var(--space-2);
 }
 
+/* ---------- Phase 4: notices and demo panel ---------- */
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-info-light);
+  border: var(--border-width) solid var(--color-border);
+  border-left: var(--space-1) solid var(--color-info);
+  border-radius: var(--radius-md);
+}
+
+.notice strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+.notice--warning {
+  background: var(--color-warning-light);
+  border-left-color: var(--color-warning);
+}
+
+.notice--success {
+  background: var(--color-success-light);
+  border-left-color: var(--color-success);
+}
+
+.notice--error {
+  background: var(--color-danger-light);
+  border-left-color: var(--color-danger);
+}
+
+.notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--button-height-sm);
+  font-size: var(--font-size-body-small);
+}
+
+.checkbox-field input {
+  flex: 0 0 var(--space-6);
+  width: var(--space-6);
+  height: var(--space-6);
+  accent-color: var(--color-primary);
+}
+
+.demo-panel {
+  border-color: var(--color-primary);
+  background: var(--color-surface-secondary);
+}
+
 /* ---------- Modal, toast, 404 ---------- */
 
 .modal-overlay {
@@ -771,7 +829,9 @@ svg {
 
   .order-card__actions,
   .order-detail__actions,
-  .product-preview > .button {
+  .product-preview > .button,
+  .notice__actions,
+  .notice__actions .button {
     width: 100%;
   }
 

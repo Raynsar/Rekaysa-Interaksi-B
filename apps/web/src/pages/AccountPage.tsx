@@ -1,9 +1,7 @@
-import { Settings, UserRound } from 'lucide-react'
-import { useToast } from '../components/ToastProvider'
+import { UserRound } from 'lucide-react'
+import DemoPanel from '../components/DemoPanel'
 
 export default function AccountPage() {
-  const { showToast } = useToast()
-
   return (
     <div className="stack stack--large">
       <h1 className="page-title">Akun</h1>
@@ -17,22 +15,11 @@ export default function AccountPage() {
           </div>
         </div>
         <p className="muted">
-          Data pesanan disimpan terpisah per pengguna dalam localStorage pada fase berikutnya.
+          Data pesanan, laporan, dan preferensi disimpan per pengguna di localStorage.
         </p>
       </section>
 
-      <section className="card stack">
-        <h2 className="section-title">Pengaturan</h2>
-        <button
-          type="button"
-          className="button button--outline"
-          onClick={() => showToast('Panel Demo akan tersedia pada Phase 4.', 'info')}
-        >
-          <Settings size={16} aria-hidden="true" />
-          Buka Panel Demo
-        </button>
-        <span className="muted">Panel Demo dipakai untuk menguji skenario gagal dan perubahan harga.</span>
-      </section>
+      <DemoPanel />
     </div>
   )
 }

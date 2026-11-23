@@ -1,0 +1,412 @@
+{
+  "generatedAt": "2026-11-23T17:12:51.692Z",
+  "tool": "Chrome headless via CDP",
+  "checks": [
+    {
+      "id": "S1 modal konfirmasi tampil",
+      "status": "Pass",
+      "detail": "Modal muncul sebelum konfirmasi"
+    },
+    {
+      "id": "S1 status menjadi Selesai",
+      "status": "Pass",
+      "detail": {
+        "before": "Diterima",
+        "after": "Selesai",
+        "stored": "Selesai",
+        "badge": false
+      }
+    },
+    {
+      "id": "S1 notifikasi tersimpan",
+      "status": "Pass",
+      "detail": {
+        "id": "ORD-2026-004:auto-complete",
+        "orderId": "ORD-2026-004",
+        "kind": "auto-complete",
+        "message": "Pesanan ORD-2026-004 telah selesai.",
+        "createdAt": 1795453972458,
+        "status": "sent"
+      }
+    },
+    {
+      "id": "S1 toast tampil",
+      "status": "Pass",
+      "detail": [
+        "Pesanan ORD-2026-003 terlambat melewati batas estimasi. Periksa status atau ajukan bantuan.",
+        "Pesanan ORD-2026-004 telah selesai."
+      ]
+    },
+    {
+      "id": "S1 pindah ke tab Selesai",
+      "status": "Pass",
+      "detail": {
+        "hash": "#/orders?status=Selesai",
+        "activeTab": "Selesai2",
+        "listed": true
+      }
+    },
+    {
+      "id": "S3 AC-036 persistence",
+      "status": "Pass",
+      "detail": {
+        "badgeAfterReload": "Selesai"
+      }
+    },
+    {
+      "id": "S2 batal status tetap",
+      "status": "Pass",
+      "detail": {
+        "badge": "Diterima",
+        "stored": "Diterima",
+        "modalClosed": true
+      }
+    },
+    {
+      "id": "S4 tutup iklan → cooldown",
+      "status": "Pass",
+      "detail": {
+        "before": true,
+        "after": false,
+        "frequency": {
+          "date": "2026-11-23",
+          "impressions": 2,
+          "lastClosedAt": 1795453976205
+        }
+      }
+    },
+    {
+      "id": "S4 AC-017 cooldown setelah reload",
+      "status": "Pass",
+      "detail": {
+        "visibleAfterReload": false
+      }
+    },
+    {
+      "id": "S4 batas 3 tayangan/hari",
+      "status": "Pass",
+      "detail": {
+        "visibleAfterCap": false
+      }
+    },
+    {
+      "id": "S5 AC-023 lampiran otomatis",
+      "status": "Pass",
+      "detail": {
+        "id": "ORD-2026-004",
+        "status": "Diterima"
+      }
+    },
+    {
+      "id": "S5 AC-024 validasi deskripsi",
+      "status": "Pass",
+      "detail": {
+        "fieldErrors": [
+          "Deskripsi wajib diisi."
+        ],
+        "ticketsBeforeValid": 0
+      }
+    },
+    {
+      "id": "S5 draft persisten",
+      "status": "Pass",
+      "detail": {
+        "category": "Paket belum diterima",
+        "description": "Paket diterima tapi status belum berubah."
+      }
+    },
+    {
+      "id": "S5 draft setelah reload",
+      "status": "Pass",
+      "detail": {
+        "retainedDraft": "Paket diterima tapi status belum berubah."
+      }
+    },
+    {
+      "id": "S5 AC-022 tiket diterbitkan",
+      "status": "Pass",
+      "detail": {
+        "successText": "Laporan diterima. Nomor tiket kamu: TKT-2026-000001",
+        "ticket": {
+          "number": "TKT-2026-000001",
+          "orderId": "ORD-2026-004",
+          "category": "Paket belum diterima",
+          "description": "Paket diterima tapi status belum berubah.",
+          "createdAt": 1795453979184
+        },
+        "tickets": 1,
+        "draftRemoved": true
+      }
+    },
+    {
+      "id": "S6 Panel Demo tersedia di Account",
+      "status": "Pass",
+      "detail": {
+        "visible": true
+      }
+    },
+    {
+      "id": "S6 flag demo tersimpan",
+      "status": "Pass",
+      "detail": {
+        "failStorageWrite": true,
+        "failNotification": false
+      }
+    },
+    {
+      "id": "S6 AC-039 rollback status",
+      "status": "Pass",
+      "detail": {
+        "badge": "Diterima",
+        "stored": "Diterima"
+      }
+    },
+    {
+      "id": "S6 AC-039 toast error",
+      "status": "Pass",
+      "detail": [
+        "Gagal menyimpan data: Storage write failed. Perubahan dibatalkan."
+      ]
+    },
+    {
+      "id": "S6 AC-039 tanpa duplikasi notifikasi",
+      "status": "Pass",
+      "detail": [
+        {
+          "id": "ORD-2026-003:delay",
+          "orderId": "ORD-2026-003",
+          "kind": "delay",
+          "message": "Pesanan ORD-2026-003 terlambat melewati batas estimasi. Periksa status atau ajukan bantuan.",
+          "createdAt": 1795453980523,
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "id": "S7 AC-021 kegagalan dicatat",
+      "status": "Pass",
+      "detail": {
+        "id": "ORD-2026-003:delay",
+        "orderId": "ORD-2026-003",
+        "kind": "delay",
+        "message": "Pesanan ORD-2026-003 terlambat melewati batas estimasi. Periksa status atau ajukan bantuan.",
+        "createdAt": 1795453983206,
+        "status": "failed",
+        "error": "Demo: layanan notifikasi gagal"
+      }
+    },
+    {
+      "id": "S7 AC-021 data pesanan tidak berubah",
+      "status": "Pass",
+      "detail": {
+        "status": "Dikirim"
+      }
+    },
+    {
+      "id": "S7 AC-021 umpan balik error",
+      "status": "Pass",
+      "detail": [
+        "Notifikasi gagal dicatat: Demo: layanan notifikasi gagal"
+      ]
+    },
+    {
+      "id": "S7 notifikasi keterlambatan tampil",
+      "status": "Pass",
+      "detail": {
+        "visible": true
+      }
+    },
+    {
+      "id": "S8 AC-040 pesan harga diperbarui",
+      "status": "Pass",
+      "detail": "Harga diperbarui. Harga berubah dari Rp 48.500 menjadi Rp 75.000. Rincian di bawah sudah memakai nilai terbaru."
+    },
+    {
+      "id": "S8 AC-040 harga checkout baru",
+      "status": "Pass",
+      "detail": {
+        "checkoutPrice": "Rp 75.000"
+      }
+    },
+    {
+      "id": "S8 sumber harga tunggal",
+      "status": "Pass",
+      "detail": {
+        "productPrice": "Rp 75.000",
+        "homePrice": "Rp 75.000"
+      }
+    },
+    {
+      "id": "S8 Reset Demo",
+      "status": "Pass",
+      "detail": {
+        "failStorageWrite": false,
+        "failNotification": false
+      }
+    },
+    {
+      "id": "S9 tanpa opt-in tidak auto-selesai",
+      "status": "Pass",
+      "detail": {
+        "badge": "Diterima"
+      }
+    },
+    {
+      "id": "S9 auto-selesai setelah opt-in",
+      "status": "Pass",
+      "detail": {
+        "badge": "Selesai",
+        "stored": "Selesai",
+        "autoCompleted": true
+      }
+    },
+    {
+      "id": "S9 notifikasi auto-selesai",
+      "status": "Pass",
+      "detail": {
+        "id": "ORD-2026-004:auto-complete",
+        "orderId": "ORD-2026-004",
+        "kind": "auto-complete",
+        "message": "Pesanan ORD-2026-004 selesai otomatis setelah pilihan Tunggu Otomatis.",
+        "createdAt": 1795453989128,
+        "status": "sent"
+      }
+    },
+    {
+      "id": "S10 tidak ada overflow pada UI Phase 4",
+      "status": "Pass",
+      "detail": []
+    }
+  ],
+  "summary": {
+    "total": 32,
+    "passed": 32,
+    "failed": 0
+  },
+  "screenshots": [
+    "docs/screenshots/phase4/ad-banner-mobile.png",
+    "docs/screenshots/phase4/completion-success-orders.png",
+    "docs/screenshots/phase4/completion-persisted-detail.png",
+    "docs/screenshots/phase4/report-draft-reloaded.png",
+    "docs/screenshots/phase4/report-success.png",
+    "docs/screenshots/phase4/demo-panel-account.png",
+    "docs/screenshots/phase4/storage-failure-rollback.png",
+    "docs/screenshots/phase4/notification-failure-detail.png",
+    "docs/screenshots/phase4/price-update-checkout.png",
+    "docs/screenshots/phase4/autocomplete-finished.png"
+  ],
+  "responsive": [
+    {
+      "width": 390,
+      "route": "home",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "detail",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "report",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "account",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "home",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "detail",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "report",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "account",
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "home",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "detail",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "report",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "account",
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "home",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "detail",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "report",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "account",
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false
+    }
+  ]
+}

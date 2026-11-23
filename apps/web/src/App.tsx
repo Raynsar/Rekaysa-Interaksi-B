@@ -1,5 +1,6 @@
 import AppShell from './components/AppShell'
 import { ToastProvider } from './components/ToastProvider'
+import { AppProvider } from './context/AppContext'
 import { RouterProvider, matchRoute, useRouter } from './utils/router'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
@@ -33,11 +34,13 @@ function Routes() {
 export default function App() {
   return (
     <ToastProvider>
-      <RouterProvider>
-        <AppShell>
-          <Routes />
-        </AppShell>
-      </RouterProvider>
+      <AppProvider>
+        <RouterProvider>
+          <AppShell>
+            <Routes />
+          </AppShell>
+        </RouterProvider>
+      </AppProvider>
     </ToastProvider>
   )
 }

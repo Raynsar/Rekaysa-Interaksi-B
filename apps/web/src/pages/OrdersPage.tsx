@@ -1,47 +1,37 @@
 import { useMemo, useState } from 'react'
 import { Search } from 'lucide-react'
-import { demoOrders } from '../services/demoData'
+import { Link, useRouter } from '../utils/router'
+import { useApp } from '../context/AppContext'
+import { countByFilter, matchesFilter } from '../services/orderService'
 import FilterTabs from '../components/FilterTabs'
 import OrderCard from '../components/OrderCard'
 import EmptyState from '../components/EmptyState'
-import { Link } from '../utils/router'
-import { FILTER_TABS, type FilterTab, type Order } from '../types'
+import { FILTER_TABS, type FilterTab } from '../types'
 
-function matchesTab(order: Order, tab: FilterTab): boolean {
-  if (tab === 'Semua') return true
-  // "Diterima" is a temporary badge, not a filter tab: it belongs to "Dikirim".
-  if (tab === 'Dikirim') return order.status === 'Dikirim' || order.status === 'Diterima'
-  return order.status === tab
+function initialTab(search: string): FilterTab {
+  const requested = new URLSearchParams(search).get('status')
+  return FILTER_TABS.find((tab) => tab === requested) ?? 'Semua'
 }
 
 export default function OrdersPage() {
-  const [activeTab, setActiveTab] = useState<FilterTab>('Semua')
+  const { state } = useApp()
+  const { search } = useRouter()
+  const [activeTab, setActiveTab] = useState<FilterTab>(() => initialTab(search))
   const [query, setQuery] = useState('')
 
-  const counts = useMemo(() => {
-    const result = Object.fromEntries(FILTER_TABS.map((tab) => [tab, 0])) as Record<
-      FilterTab,
-      number
-    >
-    demoOrders.forEach((order) => {
-      FILTER_TABS.forEach((tab) => {
-        if (matchesTab(order, tab)) result[tab] += 1
-      })
-    })
-    return result
-  }, [])
+  const counts = useMemo(() => countByFilter(state.orders), [state.orders])
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
-    return demoOrders.filter((order) => {
-      if (!matchesTab(order, activeTab)) return false
+    return state.orders.filter((order) => {
+      if (!matchesFilter(order, activeTab)) return false
       if (!needle) return true
       return (
         order.id.toLowerCase().includes(needle) ||
         order.productName.toLowerCase().includes(needle)
       )
     })
-  }, [activeTab, query])
+  }, [state.orders, activeTab, query])
 
   const resetFilters = () => {
     setActiveTab('Semua')

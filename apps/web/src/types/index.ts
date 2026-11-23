@@ -48,9 +48,60 @@ export interface Order {
   estimateMinDays: number
   estimateMaxDays: number
   estimateLabel: string
+  estimateEndAt: string
   placedAt: string
+  deliveredAt?: string
+  autoCompleteAt?: string
+  autoCompleteOptIn?: boolean
+  autoCompleted?: boolean
   spaylater?: boolean
   trackingNote?: string
+}
+
+export interface CartItem {
+  productId: string
+  quantity: number
+}
+
+export type NotificationKind = 'delay' | 'auto-complete'
+
+export interface NotificationRecord {
+  id: string
+  orderId: string
+  kind: NotificationKind
+  message: string
+  createdAt: number
+  status: 'sent' | 'failed'
+  error?: string
+}
+
+export interface ReportFormValue {
+  category: string
+  description: string
+  evidenceName?: string
+  evidenceSize?: number
+}
+
+export interface Ticket {
+  number: string
+  orderId: string
+  category: string
+  description: string
+  evidenceName?: string
+  evidenceSize?: number
+  createdAt: number
+}
+
+export interface AdFrequency {
+  date: string
+  impressions: number
+  lastClosedAt?: number
+}
+
+export interface DemoState {
+  failStorageWrite: boolean
+  failNotification: boolean
+  priceOverride?: number
 }
 
 export interface Product {

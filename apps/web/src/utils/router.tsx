@@ -11,6 +11,7 @@ import {
 
 interface RouterValue {
   path: string
+  search: string
   navigate: (to: string) => void
 }
 
@@ -21,15 +22,18 @@ function normalize(to: string): string {
   return value || '/'
 }
 
-function readHash(): string {
-  return normalize(window.location.hash.replace(/^#/, ''))
+function readLocation(): { path: string; search: string } {
+  const raw = window.location.hash.replace(/^#/, '')
+  const separator = raw.indexOf('?')
+  if (separator === -1) return { path: normalize(raw), search: '' }
+  return { path: normalize(raw.slice(0, separator)), search: raw.slice(separator + 1) }
 }
 
 export function RouterProvider({ children }: { children: ReactNode }) {
-  const [path, setPath] = useState<string>(readHash)
+  const [location, setLocation] = useState(readLocation)
 
   useEffect(() => {
-    const onHashChange = () => setPath(readHash())
+    const onHashChange = () => setLocation(readLocation())
     window.addEventListener('hashchange', onHashChange)
 
     if (!window.location.hash) {
@@ -43,7 +47,10 @@ export function RouterProvider({ children }: { children: ReactNode }) {
     window.location.hash = normalize(to)
   }, [])
 
-  const value = useMemo(() => ({ path, navigate }), [path, navigate])
+  const value = useMemo(
+    () => ({ path: location.path, search: location.search, navigate }),
+    [location.path, location.search, navigate],
+  )
 
   return <RouterContext.Provider value={value}>{children}</RouterContext.Provider>
 }
