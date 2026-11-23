@@ -234,7 +234,7 @@ Proyek di-deploy manual ke Vercel oleh pemilik repo:
 4. Klik Deploy dan tunggu hingga proses selesai.
 5. Salin URL publik dari dashboard Vercel.
 
-Live URL: `[URL Vercel diisi setelah deploy]`
+Live URL: https://rekaysa-interaksi-b.vercel.app
 
 ## 15. Validasi Visual
 Screenshot halaman utama disimpan sebagai bukti validasi visual:

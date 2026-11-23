@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Deployment: `[URL Vercel diisi setelah deploy]`
+Deployment: https://rekaysa-interaksi-b.vercel.app
 
 ## [2.0.0] - 2026-11-24
 
@@ -161,8 +161,8 @@ Deployment: `[URL Vercel diisi setelah deploy]`
 
 - Confirm the final `npm run build` succeeds and emits `dist/`, and that
   `apps/web/vercel.json` contains the SPA rewrite `/(.*)` → `/index.html`.
-- Expand the README Deployment section into five manual Vercel steps with the
-  Live URL placeholder `[URL Vercel diisi setelah deploy]`.
+- Expand the README Deployment section into five manual Vercel steps, leaving
+  the Live URL field ready for the deployment URL.
 - Extend the README Visual Validation section with pointers to
   `docs/screenshots/phase3/`, `docs/screenshots/phase4/` and
   `docs/screenshots/phase5/`.
