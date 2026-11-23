@@ -55,9 +55,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   time reads so 24-hour and delay logic is deterministic in tests; tested
   logic must not call `Date.now()` directly.
 
+#### Phase 3 — UI
+
+- Add 11 routes (10 minimum pages plus a 404): Home, Product, Cart, Checkout,
+  Orders, Order Detail (normal), Order Detail (Diterima), Order Detail
+  (Selesai), Report, Account and NotFound.
+- Add reusable components: `AppShell`, `AdBanner`, `StatusBadge`,
+  `PriceBreakdown`, `FilterTabs`, `OrderCard`, `OrderDetail` sections,
+  `ConfirmModal`, `ReportForm`, `DeliveryEstimate`, `EmptyState` and
+  `ToastProvider`/toast host.
+- Add a hash-based router and a token-only component stylesheet driven by
+  `src/styles/tokens.css`; `npm run check:tokens` reports 85 defined tokens,
+  73 used tokens, 276 `var()` usages, no undefined tokens and no hardcoded
+  hex/px in component CSS.
+- Save 44 headless-Chrome screenshots (11 routes x 390/768/1024/1440 px) in
+  `docs/screenshots/phase3/` and the measurement evidence in
+  `docs/validation/phase3/overflow.json`.
+- Record overflow result: 0 horizontal overflows across 44 checks; navigation
+  matches the expected pattern at every breakpoint (bottom nav < 640, tablet
+  nav 640–1023, sidebar >= 1024); 0 primary actions covered or clipped.
+- Visual validation: sampled computed styles match DESIGN-SYSTEM.md (primary
+  #EE4D2D, background #F5F5F5, surface #FFFFFF, border #E5E5E5, text #212121,
+  button radius 8px / height 40px / 14px / 600, badge radius 999px / 12px,
+  card radius 12px, ad close 44x44px). No visual deviation found.
+- Note: the Order Detail "Diterima" and "Selesai" pages use the Phase 3 demo
+  seed; state changes, ticket generation and notification logic remain for
+  Phase 4. The Account panel currently contains only a labelled placeholder
+  button as approved.
+
 ### Changed
 
 - Renamed `README.MD` to `README.md` to avoid case-sensitive path failures on
   Vercel/Linux.
+- Phase 3: hide the bottom navigation from 640 px upward and show the tablet
+  top navigation between 640–1023 px, so navigation changes match the
+  documented breakpoints.
 
 Deployment URL: `[URL Vercel diisi setelah deploy]`

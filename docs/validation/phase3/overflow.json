@@ -1,0 +1,2160 @@
+{
+  "generatedAt": "2026-11-23T16:54:18.733Z",
+  "tool": "Chrome headless via DevTools Protocol",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "baseUrl": "http://127.0.0.1:5173",
+  "breakpoints": [
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "viewportHeight": 900,
+  "routes": [
+    "home",
+    "product",
+    "cart",
+    "checkout",
+    "orders",
+    "order-detail-normal",
+    "order-detail-diterima",
+    "order-detail-selesai",
+    "report",
+    "account",
+    "not-found"
+  ],
+  "results": [
+    {
+      "route": "home",
+      "path": "/",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/home-390.png"
+    },
+    {
+      "route": "product",
+      "path": "/product",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": null,
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/product-390.png"
+    },
+    {
+      "route": "cart",
+      "path": "/cart",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/cart-390.png"
+    },
+    {
+      "route": "checkout",
+      "path": "/checkout",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/checkout-390.png"
+    },
+    {
+      "route": "orders",
+      "path": "/orders",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/orders-390.png"
+    },
+    {
+      "route": "order-detail-normal",
+      "path": "/orders/ORD-2026-001",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-normal-390.png"
+    },
+    {
+      "route": "order-detail-diterima",
+      "path": "/orders/ORD-2026-004",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-diterima-390.png"
+    },
+    {
+      "route": "order-detail-selesai",
+      "path": "/orders/ORD-2026-005",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-selesai-390.png"
+    },
+    {
+      "route": "report",
+      "path": "/report/ORD-2026-004",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/report-390.png"
+    },
+    {
+      "route": "account",
+      "path": "/account",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/account-390.png"
+    },
+    {
+      "route": "not-found",
+      "path": "/route-tidak-dikenal",
+      "width": 390,
+      "innerWidth": 390,
+      "documentScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": true,
+        "sidebar": false,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "16px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/not-found-390.png"
+    },
+    {
+      "route": "home",
+      "path": "/",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/home-768.png"
+    },
+    {
+      "route": "product",
+      "path": "/product",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": null,
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/product-768.png"
+    },
+    {
+      "route": "cart",
+      "path": "/cart",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/cart-768.png"
+    },
+    {
+      "route": "checkout",
+      "path": "/checkout",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/checkout-768.png"
+    },
+    {
+      "route": "orders",
+      "path": "/orders",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/orders-768.png"
+    },
+    {
+      "route": "order-detail-normal",
+      "path": "/orders/ORD-2026-001",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-normal-768.png"
+    },
+    {
+      "route": "order-detail-diterima",
+      "path": "/orders/ORD-2026-004",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-diterima-768.png"
+    },
+    {
+      "route": "order-detail-selesai",
+      "path": "/orders/ORD-2026-005",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-selesai-768.png"
+    },
+    {
+      "route": "report",
+      "path": "/report/ORD-2026-004",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/report-768.png"
+    },
+    {
+      "route": "account",
+      "path": "/account",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/account-768.png"
+    },
+    {
+      "route": "not-found",
+      "path": "/route-tidak-dikenal",
+      "width": 768,
+      "innerWidth": 768,
+      "documentScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": false,
+        "tabletNav": true
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "24px",
+          "paddingTop": "24px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/not-found-768.png"
+    },
+    {
+      "route": "home",
+      "path": "/",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/home-1024.png"
+    },
+    {
+      "route": "product",
+      "path": "/product",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": null,
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/product-1024.png"
+    },
+    {
+      "route": "cart",
+      "path": "/cart",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/cart-1024.png"
+    },
+    {
+      "route": "checkout",
+      "path": "/checkout",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/checkout-1024.png"
+    },
+    {
+      "route": "orders",
+      "path": "/orders",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/orders-1024.png"
+    },
+    {
+      "route": "order-detail-normal",
+      "path": "/orders/ORD-2026-001",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-normal-1024.png"
+    },
+    {
+      "route": "order-detail-diterima",
+      "path": "/orders/ORD-2026-004",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-diterima-1024.png"
+    },
+    {
+      "route": "order-detail-selesai",
+      "path": "/orders/ORD-2026-005",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-selesai-1024.png"
+    },
+    {
+      "route": "report",
+      "path": "/report/ORD-2026-004",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/report-1024.png"
+    },
+    {
+      "route": "account",
+      "path": "/account",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/account-1024.png"
+    },
+    {
+      "route": "not-found",
+      "path": "/route-tidak-dikenal",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "32px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/not-found-1024.png"
+    },
+    {
+      "route": "home",
+      "path": "/",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/home-1440.png"
+    },
+    {
+      "route": "product",
+      "path": "/product",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": null,
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/product-1440.png"
+    },
+    {
+      "route": "cart",
+      "path": "/cart",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/cart-1440.png"
+    },
+    {
+      "route": "checkout",
+      "path": "/checkout",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/checkout-1440.png"
+    },
+    {
+      "route": "orders",
+      "path": "/orders",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/orders-1440.png"
+    },
+    {
+      "route": "order-detail-normal",
+      "path": "/orders/ORD-2026-001",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": {
+          "backgroundColor": "rgb(227, 242, 253)",
+          "color": "rgb(25, 118, 210)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-normal-1440.png"
+    },
+    {
+      "route": "order-detail-diterima",
+      "path": "/orders/ORD-2026-004",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-diterima-1440.png"
+    },
+    {
+      "route": "order-detail-selesai",
+      "path": "/orders/ORD-2026-005",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": {
+          "backgroundColor": "rgb(232, 245, 233)",
+          "color": "rgb(46, 125, 50)",
+          "borderRadius": "999px",
+          "fontSize": "12px"
+        },
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/order-detail-selesai-1440.png"
+    },
+    {
+      "route": "report",
+      "path": "/report/ORD-2026-004",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/report-1440.png"
+    },
+    {
+      "route": "account",
+      "path": "/account",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": false,
+        "visible": false,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": null,
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/account-1440.png"
+    },
+    {
+      "route": "not-found",
+      "path": "/route-tidak-dikenal",
+      "width": 1440,
+      "innerWidth": 1440,
+      "documentScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "navigation": {
+        "bottomNav": false,
+        "sidebar": true,
+        "tabletNav": false
+      },
+      "primaryAction": {
+        "present": true,
+        "visible": true,
+        "covered": false
+      },
+      "visual": {
+        "body": {
+          "backgroundColor": "rgb(245, 245, 245)",
+          "color": "rgb(33, 33, 33)",
+          "fontFamily": "Inter, system-ui, sans-serif"
+        },
+        "primaryButton": {
+          "backgroundColor": "rgb(238, 77, 45)",
+          "borderRadius": "8px",
+          "minHeight": "40px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        "statusBadge": null,
+        "card": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 229, 229)",
+          "borderRadius": "12px"
+        },
+        "adClose": {
+          "width": "44px",
+          "height": "44px"
+        },
+        "pageContent": {
+          "paddingLeft": "48px",
+          "paddingTop": "32px"
+        }
+      },
+      "screenshot": "docs/screenshots/phase3/not-found-1440.png"
+    }
+  ],
+  "summary": {
+    "checks": 44,
+    "horizontalOverflow": 0,
+    "navigationMismatches": [],
+    "primaryActionCovered": [],
+    "primaryActionNotVisible": [],
+    "visualMismatches": []
+  }
+}

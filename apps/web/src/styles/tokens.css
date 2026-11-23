@@ -98,6 +98,8 @@
   --badge-padding-y: 4px;
   --badge-padding-x: 10px;
   --touch-target-min: 44px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
   --transition-duration: 150ms;
   --border-width: 1px;
 

@@ -8,7 +8,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "capture:phase3": "node scripts/capture-phase3.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.78.0",
