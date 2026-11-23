@@ -227,12 +227,18 @@ Lihat `ACCEPTANCE-CRITERIA.md` (AC-001 s/d AC-042).
 ## 14. Deployment
 Proyek di-deploy manual ke Vercel oleh pemilik repo:
 1. Login/daftar Vercel dengan akun GitHub.
-2. Import repo, konfigurasi: Framework Vite, Root Directory `apps/web`,
+2. Import repo GitHub
+   `https://github.com/Raynsar/Rekaysa-Interaksi-B.git`.
+3. Konfigurasi build: Framework `Vite`, Root Directory `apps/web`,
    Build Command `npm run build`, Output Directory `dist`.
-3. Deploy, tunggu selesai, salin URL publik.
+4. Klik Deploy dan tunggu hingga proses selesai.
+5. Salin URL publik dari dashboard Vercel.
 
 Live URL: `[URL Vercel diisi setelah deploy]`
 
 ## 15. Validasi Visual
-Screenshot tiap halaman utama di 390px (mobile) dan 1440px (desktop)
-disimpan di `docs/screenshots/phase5/` sebagai bukti validasi.
+Screenshot halaman utama disimpan sebagai bukti validasi visual:
+- `docs/screenshots/phase3/` — 11 halaman × 390/768/1024/1440px.
+- `docs/screenshots/phase4/` — perubahan UI setelah persistensi, iklan,
+  notifikasi, dan pelaporan.
+- `docs/screenshots/phase5/` — 11 halaman × 390/1440px untuk audit akhir.
