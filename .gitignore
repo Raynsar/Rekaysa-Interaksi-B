@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+dist-ssr/
+.vite/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Test output
+coverage/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
