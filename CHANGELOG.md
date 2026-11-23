@@ -118,6 +118,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   ticket, all three demo scenarios, auto-complete with and without opt-in.
   Formal AC statuses remain reserved for Phase 5.
 
+#### Phase 5 — Automated tests and AC verification
+
+- Add 5 Vitest/Testing Library test files with 38 passing cases:
+  `services-pricing-time.test.ts`, `services-behavior.test.ts`,
+  `hooks.test.tsx`, `components.test.tsx` and `integration.test.tsx`.
+  Coverage includes pure price/time/report/ticket/notification/ad/order
+  functions, all four hooks (`usePersistentState`, `useAutoComplete`,
+  `useAdFrequency`, `useClock`), six components (`PriceBreakdown`,
+  `ConfirmModal`, `ReportForm`, `AdBanner`, `FilterTabs`, `ReminderBanner`,
+  plus `DeliveryEstimate`) and end-to-end flows for completion, filter/search,
+  auto-complete opt-in, duplicate prevention, reporting, navigation and
+  localStorage isolation.
+- Make `App` accept an optional `initialNow` prop so the injectable clock can
+  be used from integration tests without changing production behaviour.
+- Add `npm run verify:phase5` (Chrome headless via CDP). It captured 22
+  screenshots (11 routes x 390/1440 px) in `docs/screenshots/phase5/` and a
+  computed-style audit in `docs/validation/phase5/visual-audit.json`: 0 visual
+  deviations from DESIGN-SYSTEM.md, 0 horizontal overflows, 0 navigation
+  mismatches, 0 covered primary actions, and 0 pages over 3 seconds.
+- Add the mandatory 42-row acceptance table in
+  `docs/validation/phase5/ac-results.md` with columns
+  `AC | Priority | Status | Bukti | Catatan`. Recap: **Pass 42 · Fail 0 ·
+  Blocked 0 · Not Tested 0**. AC-037 is Pass with the Phase 1 Q8 note:
+  single-user simulation, no real authentication, isolation by namespaced
+  localStorage keys.
+- Combine Phase 3 (`overflow.json`, 44 screenshots, token check), Phase 4
+  (`phase4-runtime.json`, `responsive.json`, 10 screenshots) and the new
+  Vitest/runtime evidence into the AC table. No formal status was claimed
+  before Phase 5.
+- Note: visual inspection by the model is still limited to DOM/computed-style
+  evidence; PNG screenshots are saved for owner review.
+
 ### Changed
 
 - Renamed `README.MD` to `README.md` to avoid case-sensitive path failures on

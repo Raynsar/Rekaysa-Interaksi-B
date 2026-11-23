@@ -11,7 +11,8 @@
     "test:watch": "vitest",
     "check:tokens": "node scripts/check-tokens.mjs",
     "capture:phase3": "node scripts/capture-phase3.mjs",
-    "verify:phase4": "node scripts/verify-phase4.mjs"
+    "verify:phase4": "node scripts/verify-phase4.mjs",
+    "verify:phase5": "node scripts/verify-phase5.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.78.0",

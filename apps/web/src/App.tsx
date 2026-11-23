@@ -31,10 +31,10 @@ function Routes() {
   return <NotFoundPage />
 }
 
-export default function App() {
+export default function App({ initialNow }: { initialNow?: number } = {}) {
   return (
     <ToastProvider>
-      <AppProvider>
+      <AppProvider initialNow={initialNow}>
         <RouterProvider>
           <AppShell>
             <Routes />
